@@ -10,14 +10,14 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(cors({
-    origin: ['http://localhost:5173'],
+    origin: ['http://localhost:5173', `https://scam-detector-frontend.vercel.app`],
     credentials: true           
 }));
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-app.use(router)
+app.use("/api/v1",router)
 
 app.listen(PORT,()=>{
     console.log(`Server started at Port ${process.env.PORT}`)
