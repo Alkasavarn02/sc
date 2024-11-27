@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://scam-detector-frontend.vercel.app/'],
+    origin: ['http://localhost:5173', 'https://scam-detector-frontend.vercel.app'],
     credentials: true           
 }));
 
