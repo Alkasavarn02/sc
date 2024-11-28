@@ -16,7 +16,7 @@ const ReportScamSchema = new mongoose.Schema(
         },
         reports:{
             type: Number,
-            default: 0
+            default: 1
         }
     }
 )
